@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1AD84E44-83F8-4C5F-89F0-A265364D0ACD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LCWaikikiFinal.UI", "src\LCWaikikiFinal.UI\LCWaikikiFinal.UI.csproj", "{0D9F9706-F778-49D3-B279-52EB5653A9BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D9F9706-F778-49D3-B279-52EB5653A9BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D9F9706-F778-49D3-B279-52EB5653A9BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D9F9706-F778-49D3-B279-52EB5653A9BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D9F9706-F778-49D3-B279-52EB5653A9BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D9F9706-F778-49D3-B279-52EB5653A9BF} = {1AD84E44-83F8-4C5F-89F0-A265364D0ACD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5ED2523-3010-4EC2-8B8D-15A9352B2A20}
+	EndGlobalSection
+EndGlobal

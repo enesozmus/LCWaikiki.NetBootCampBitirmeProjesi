@@ -1,0 +1,14 @@
+﻿@model ProductsByCategoryForIndex
+
+<table class="table">
+    @foreach (var item in Model.CategoryItems)
+    {
+        <tr>
+            <th scope="col">
+                <i class="fa-solid fa-angles-right"></i>
+                 @*<a href="~/Products/Index/@item.Id" class="list-group-item list-group-item-action">@item.Name</a>*@
+                <a asp-controller="Products" asp-action="Index" asp-route-id="@item.Id">@item.Name</a>
+            </th>
+        </tr>
+    }
+</table>

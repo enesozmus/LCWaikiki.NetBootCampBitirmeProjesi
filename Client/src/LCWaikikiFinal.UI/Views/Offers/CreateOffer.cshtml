@@ -1,0 +1,38 @@
+﻿@model CreateOfferViewModel
+
+@{
+    ViewData["Title"] = "CreateOffer";
+    Layout = null;
+}
+
+@if (TempData["errormessage"] != null)
+{
+    <p style="color:red;">
+        @TempData["errormessage"]?.ToString()
+    </p>
+}
+
+<style>
+    .form-control{
+        border: 1px solid #0080ff;
+    }
+</style>
+
+<h2 class="text-center">
+    <i class="fa-solid fa-money-bill-trend-up text-success"></i>
+    Teklif Sayfası
+</h2>
+
+<div class="container my-4 pt-4">
+    <form asp-controller="Offers" asp-action="CreateOffer" method="post">
+
+        <div class="form-outline">
+            <label class="form-label">Teklif Miktarı: </label>
+            <input type="number" asp-for="@Model.OfferPrice" class="form-control" />
+            <span asp-validation-for="OfferPrice" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success btn-block mt-3">Teklif Yap</button>
+    </form>
+</div>
+

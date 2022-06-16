@@ -1,0 +1,9 @@
+#product-details h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+.detail-image-css{
+    width: contain;
+}

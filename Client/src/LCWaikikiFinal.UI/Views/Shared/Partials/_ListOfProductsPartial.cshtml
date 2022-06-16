@@ -1,0 +1,116 @@
+﻿@model ProductsByCategoryForIndex
+
+<section style="background-color: #eee;">
+    <div class="container py-3">
+        @foreach (var item in Model.ProductItems)
+        {
+            <div class="row justify-content-center mb-3">
+                <div class="col-md-12 col-xl-10">
+                    <div class="card shadow-0 border rounded-3">
+                        <div class="card-body">
+                            <div class="row ">
+
+                                <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                                    <div class="bg-image hover-zoom ripple rounded ripple-surface">
+
+                                        <img class="w-100" src="~/images/@item.ImageUrl" alt="@item.Name" />
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h5>@item.Name</h5>
+                                    <div class="d-flex flex-row">
+                                        <div class="text-danger mb-1 me-2">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <span>#</span>
+                                    </div>
+
+                                    <div class="mt-1 mb-0 text-muted small">
+                                        <span>@item.Brand</span>
+                                        <span class="text-primary"> • </span>
+                                        <span>@item.Color</span>
+                                        <span class="text-primary"> • </span>
+                                        <span>@item.Size<br /></span>
+                                    </div>
+
+                                    <div class="mb-2 text-muted small">
+                                        <span>Unique design</span>
+                                        <span class="text-primary"> • </span>
+                                        <span>For men</span>
+                                        <span class="text-primary"> • </span>
+                                        <span>Casual<br /></span>
+                                    </div>
+
+                                    <p class="text-truncate mb-4 mb-md-0">
+                                        There are many variations of passages of Lorem Ipsum available, but the
+                                        majority have suffered alteration in some form, by injected humour, or
+                                        randomised words which don't look even slightly believable.
+                                    </p>
+                                </div>
+
+                                <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                    @if (!item.IsSold)
+                                    {
+                                        <div class="d-flex flex-row align-items-center mb-1">
+                                            <h4 class="mb-1 me-1">@item.Price₺</h4>
+                                            <span class="text-danger"><s>20.99₺</s></span>
+                                        </div>
+
+                                        <div class="badge">
+                                            @if (@item.Status == "Yeni & Etiketli")
+                                            {
+                                                <span style="color: deeppink">Yeni & Etiketli</span>
+                                                @*<div class="tag bg-red">Yeni & Etiketli</div>*@
+                                            }
+                                            else if (@item.Status == "Defolu")
+                                            {
+                                                <span style="color: purple">Defolu</span>
+                                                @*<div class="tag bg-warning">Defolu</div>*@
+                                            }
+                                            else if (@item.Status == "Çok Kullanılmış")
+                                            {
+                                                <span style="color: brown">Çok Kullanılmış</span>
+                                                @*<div class="tag bg-primary">Çok Kullanılmış</div>*@
+                                            }
+                                            else
+                                            {
+                                                <span style="color: green">Yeni</span>
+                                                @* <div class="tag bg-green">new</div>*@
+                                            }
+                                        </div>
+
+                                        <div class="d-flex flex-column mt-4">
+
+                                            <a class="btn btn-primary btn-sm" type="button" asp-controller="Products" asp-action="Detail" asp-route-id="@item.Id">Detay Sayfası</a>
+
+                                            <a class="btn btn-outline-success btn-sm mt-2" type="button" asp-controller="#" asp-action="#"> Satın Al </a>
+
+                                            @if (item.IsOfferable)
+                                            {
+                                                <a onclick="showInPopup('@Url.Action("CreateOffer", "Offers", new RouteValueDictionary(new { id = item.Id }))', 'New Product')" class="btn btn-outline-danger btn-sm mt-2" type="button">Teklif Yap</a>
+                                                @* <a asp-controller="Offers" asp-action="CreateOffer" asp-route-id="@item.Id" class="btn btn-danger btn-sm"> Teklif Yap </a>*@
+                                            }
+
+                                        </div>
+
+                                    }
+                                    else
+                                    {
+                                        <a class="btn btn-danger btn-sm d-flex flex-row align-items-center mt-3">Ürün Satışta Değildir!</a>
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+</section>

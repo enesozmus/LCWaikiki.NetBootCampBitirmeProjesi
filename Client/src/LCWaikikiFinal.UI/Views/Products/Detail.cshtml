@@ -1,0 +1,156 @@
+﻿@model GetProductDetailViewModel
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/ProductDetails.css" asp-append-version="true" />
+</head>
+
+
+<div id="product-details" class="container mt-4">
+    <div class="row">
+
+        <div class="col-md-4">
+            <img src="~/images/@Model.ImageUrl" class="img-fluid rounded detail-image-css"/>
+        </div>
+
+        <div class="col-md-8">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>@Model.Name</h1>
+                </div>
+            </div>
+
+            @*            <div class="row">
+                <div class="col-md-12">
+                @if(@Model.Stock > 0)
+                {
+                <span class="badge bg-success">Stok Durumu: @Model.Stock</span>
+                }
+                else
+                {
+                <span class="badge bg-secondary">Tükendi</span>
+                }
+                <span>Ürün Kodu: </span>
+                </div>
+                </div>*@
+
+            <div class="row">
+                <div class="col-md-12 mt-1">
+                    <div class="description">
+                        <div class="mt-1 mb-0 text-muted small">
+                            <span>@Model.Brand</span>
+                            <span class="text-primary"> • </span>
+                            <span>@Model.Color</span>
+                            <span class="text-primary"> • </span>
+                            <span>@Model.Size<br /></span>
+                        </div>
+
+                        <div class="mb-2 text-muted small">
+                            <span>@Model.Pattern</span>
+                            <span class="text-primary"> • </span>
+                            <span>@Model.Status</span>
+                            <span class="text-primary"> • </span>
+                            <span>@Model.Fabric<br /></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span class="badge bg-success">99</span>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <h4 id="product-price">Peşin Fiyatı: @Model.Price</h4>
+                        </div>
+
+                        <div class="row mt-3" id="add-to-cart">
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-outline-success">
+                                    <i class="fa-solid fa-cart-arrow-down"></i>
+                                    Sepete Ekle
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 mt-3">
+            <ul class="nav nav-tabs mb-2" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Ürün Açıklaması</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Bakım</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">İade ve Değişim</button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review" type="button" role="tab" aria-controls="review" aria-selected="false">Yorumlar</button>
+                </li>
+
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">######</div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">######</div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">######</div>
+                <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">######</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*<table class="table">
+    <thead>
+    <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Kullanıcı Adı</th>
+    <th scope="col">Marka</th>
+    <th scope="col">Ürün Adı</th>
+    <th scope="col">Size</th>
+    <th scope="col">Fiyat</th>
+    <th scope="col">Renk</th>
+    <th scope="col">Kumaş</th>
+    <th scope="col">Desen</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+    <th scope="row">@Model.Id</th>
+    <th scope="row">@Model.Username</th>
+    <th scope="row">@Model.Brand</th>
+    <th scope="row">@Model.Name</th>
+    <th scope="row">@Model.Size</th>
+    <th scope="row">@Model.Price</th>
+    <th scope="row">@Model.Color</th>
+    <th scope="row">@Model.Status</th>
+    <th scope="row">@Model.Fabric</th>
+    <th scope="row">@Model.Pattern</th>
+    </tr>
+    </tbody>
+    </table>*@

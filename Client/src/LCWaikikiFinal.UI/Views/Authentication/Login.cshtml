@@ -1,0 +1,36 @@
+﻿@model UserLoginModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <form asp-controller="Authentication" asp-action="Login" method="post" class="m-5 p-3">
+        <div class="mb-3">
+            <label class="form-label">Email Adresi: </label>
+            <input type="email" class="form-control" name="Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Parola: </label>
+            <input type="password" class="form-control" name="Password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Giriş Yap</button>
+    </form>
+</div>
+
+@*<div class="container">
+    <form asp-controller="Authentication" asp-action="SignIn" method="post">
+        <div class="mb-3">
+            <input asp-for="Email" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Email)" />
+            <div><span asp-validation-for="Email"></span>  </div>
+        </div>
+        <div class="mb-3">
+            <input asp-for="Password" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Password)" />
+            <div><span asp-validation-for="Password"></span>  </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>*@

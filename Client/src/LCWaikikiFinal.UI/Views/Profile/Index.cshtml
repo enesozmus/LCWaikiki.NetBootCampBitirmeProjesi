@@ -1,0 +1,37 @@
+﻿@model IReadOnlyList<GetProductsByUserViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Kullanıcı ID</th>
+            <th scope="col">Ürün ID</th>
+            <th scope="col">Ürün Adı</th>
+            <th scope="col">Ürün Fiyatı</th>
+            <th scope="col">Satın alınmış mı?</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.AppUserId</th>
+                <th scope="row">@item.Id</th>   
+                <th scope="row">@item.Name</th>
+                <th scope="row">@item.Price</th>
+                <th scope="row">@item.IsSold</th>
+                <th scope="row">
+                    @**@
+                    @*<a onclick="showInPopup('@Url.Action("CreateProduct", "Products")', 'New Product')"  class="btn btn-primary btn-sm">Ürün Ekle</a>*@
+                    <a asp-controller="Products" asp-action="CreateProduct" class="btn btn-primary btn-sm">Ürün Ekle</a>
+                    <a asp-controller="Products" asp-action="RemoveProduct" asp-route-id ="@item.Id" class="btn btn-danger btn-sm">Ürün Sil</a>
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>
+

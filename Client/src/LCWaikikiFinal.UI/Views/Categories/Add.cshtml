@@ -1,0 +1,49 @@
+﻿@model CreateCategoryViewModel
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="login-box">
+	<div class="card">
+		<div class="card-body login-card-body">
+			<p class="login-box-msg">
+				<div asp-validation-summary="All"></div>
+			</p>
+
+			<form asp-action="Add" asp-controller="Categories" method="post">
+				<div class="input-group mb-3">
+					<input asp-for="Name" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Name)" />
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-user"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="input-group mb-3">
+					<input asp-for="Description" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Description)" />
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-lock"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-8">
+					</div>
+
+					<div class="col-4">
+						<button type="submit" class="btn btn-primary btn-block">Kayıt ol</button>
+					</div>
+
+				</div>
+			</form>
+
+		</div>
+
+	</div>
+</div>
+

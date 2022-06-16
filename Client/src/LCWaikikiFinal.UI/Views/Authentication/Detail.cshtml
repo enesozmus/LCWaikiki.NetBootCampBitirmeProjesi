@@ -1,0 +1,28 @@
+﻿@model GetUserDetailViewModel
+
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Adınız:</th>
+            <th scope="col">Soyadınız:</th>
+            <th scope="col">Kullanıcı Adınız:</th>
+            <th scope="col">Email Adresiniz:</th>
+            <th scope="col">Telefon Numaranız:</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <th scope="row">@Model.FirstName</th>
+                <th scope="row">@Model.LastName</th>
+                <th scope="row">@Model.UserName</th>
+                <th scope="row">@Model.Email</th>
+                <th scope="row">@Model.PhoneNumber</th>
+            </tr>
+    </tbody>
+</table>
+
