@@ -17,6 +17,7 @@ http://localhost:5006 url'ini tüketen bir ASP.NET Core Web App (MVC) projesi
 > * Onion Architecture Altyapısında İnşa
 > * İlişkisel Veri Tabanı Tasarımı ve Migrate Edilmesi
 > * Veri Tabanının Tohumlanması
+> * IEntityTypeConfiguration Interface'i ile Veri Tabanı Konfigürasyonu
 > * Optimal Generic Repository Design Pattern
 > * EF Core Tracking Performans Optimizasyonu
 > * İsteğe Uyarlanmış SaveChangeAsync
