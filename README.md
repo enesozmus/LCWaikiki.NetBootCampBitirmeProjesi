@@ -1,6 +1,6 @@
 ## LC Waikiki BootCamp Bitirme Projesi
 
-### Lgin
+### Login
 > * enes@seeddata.com
 > * Customer1*123
 
