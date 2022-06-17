@@ -20,5 +20,6 @@
 > * MediatR Kütüphanesi Entegrasyonu
 > * FluentValidation Kütüphanesi Entegrasyonu
 > * AutoMapper Kütüphanesi Entegrasyonu
+> * AspNetCore Identity Kütüphanesi Entegrasyonu
 > * JSON Web Token Entegrasyonu
 > * Temel CRUD işlemleri
