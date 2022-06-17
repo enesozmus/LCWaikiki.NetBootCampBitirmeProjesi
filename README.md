@@ -1,5 +1,9 @@
 ## LC Waikiki BootCamp Bitirme Projesi
 
+### Lgin
+> * enes@seeddata.com
+> * Customer1*123
+
 ### Architecture
 > * Onion Architecture
 > * Object-Oriented Programing
@@ -8,7 +12,8 @@
 
 ### Contents
 > * Onion Architecture Altyapısında İnşa
-> * Veri tabanı Tasarımı ve Migrate Edilmesi
+> * İlişkisel Veri Tabanı Tasarımı ve Migrate Edilmesi
+> * Veri Tabanının Tohumlanması
 > * Optimal Generic Repository Design Pattern
 > * EF Core Tracking Performans Optimizasyonu
 > * İsteğe Uyarlanmış SaveChangeAsync
