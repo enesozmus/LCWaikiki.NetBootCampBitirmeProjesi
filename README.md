@@ -1,5 +1,8 @@
 ## LC Waikiki BootCamp Bitirme Projesi
 
+http://localhost:5006 url'ini tüketen bir ASP.NET Core Web App (MVC) projesi
+
+
 ### Login
 > * enes@seeddata.com
 > * Customer1*123
